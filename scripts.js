@@ -28,8 +28,6 @@ function showStarter(){
     if(s1.value==1 && s2.value==1 && s3.value==1 && s4.value==1 && s5.value==1){
         location.replace("https://vlcolquett.github.io/escape/index");
         
-    }else {
-        alert("hmmm let's try again")
     }
     
 }

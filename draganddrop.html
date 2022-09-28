@@ -8,114 +8,136 @@
 </head>
 <body>
     <style>
-
-        #div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9, #div10, 
-        #div11, #div12, #div13, #div14, #div15, #div16, #div17, #div18, #div19, #div20 {
+        @media only screen and (orientation:landscape){
+            #container {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+        }
+        #div1, #div2, #div3, #div4, #empty_div {
+          width: 60px;
+          height: 60px; 
+          margin: 10px;
+          padding: 10px;
+        }
+        
+        #div5, #div6, #div7, #div8, #div9, #div10, 
+        #div11, #div12, #div13, #div14 {
           
-          width: 100px;
-          height: 35px;
+          width: 60px;
+          height: 60px;
           margin: 10px;
           padding: 10px;
           border: 1px solid black;
         }
         
         .column {
-        float: left;
-        width: 50%;
+        /*float: left;
+        /*width: 50%;*/
         padding: 10px;
-        
+
          }
 
         .row {
         display:flex;
+        
         }
         .img-squ{
-            position:absolute;
+
+            height:50px;
+            width: 50px
         }
         .img-kiffy{
-            position:absolute;
-            top: 500px;
+            height: 60px;
+            width: 50px;
+        }
+        .img-brutus{
+            height: 60px;
+            width: 50px;
         }
     </style>
     <script>
+        
         function allowDrop(ev) {
           ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          
         }
         
         function drag(ev) {
           ev.dataTransfer.setData("text", ev.target.id);
+          ev.dataTransfer.effectAllowed = "copyMove";
+
         }
         
         function drop(ev) {
           ev.preventDefault();
           var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
+          //ev.target.appendChild(document.getElementById(data));
+          var nodeCopy = document.getElementById(data).cloneNode(true);
+          nodeCopy.id = "newId";
+          ev.target.appendChild(nodeCopy);
+        }
+        function checkDrops(){
+            var drop1 = document.getElementById("div5");
+            var drop2 = document.getElementById("div6");
+            var drop3 = document.getElementById("div7");
+            var drop4 = document.getElementById("div8");
+            var drop5 = document.getElementById("div9");
+            var drop6 = document.getElementById("div10");
+            var drop7 = document.getElementById("div11");
         }
     </script>
 </head>
-<body>
-    Hello World!
-    <div>
+<body id="container">
+    
+    <!--div>
         <button type="button"  onclick="dragAndDrop()"> 
             hmmm what is this? 
         </button> 
 
     </div>
     <h2>Drag and Drop</h2>
-    <p>Drag the image back and forth between the two div elements.</p>
+    <p>Drag the image back and forth between the two div elements.</p-->
 
-    <div class="row">
-        <div class="column">
+    <div class="column" >
+        <div></div>
+        <div class="row">
+            <div id="empty_div"></div>
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/warrior_princess.png" draggable="true" ondragstart="drag(event)" id="drag4">
+            </div>
             <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <img class="img-squ" src="media/squirrel.png" draggable="true" ondragstart="drag(event)" id="drag1">
-                <img class="img-squ" src="media/squirrel.png" draggable="true" ondragstart="drag(event)" id="drag2">
-                <img class="img-squ" src="media/squirrel.png" draggable="true" ondragstart="drag(event)" id="drag3">
             </div>
-            
             <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img class="img-kiffy" src="media/kiffy.png" draggable="true" ondragstart="drag(event)" id="drag4">
-                <img class="img-kiffy" src="media/kiffy.png" draggable="true" ondragstart="drag(event)" id="drag5">
-                <img class="img-kiffy" src="media/kiffy.png" draggable="true" ondragstart="drag(event)" id="drag6">
+                <img class="img-kiffy" src="media/kiffy.png" draggable="true" ondragstart="drag(event)" id="drag2">
             </div>
-
-            <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="media/pulp_fiction.jpeg" draggable="true" ondragstart="drag(event)" id="drag7" width="88" height="31">
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/brutus.png" draggable="true" ondragstart="drag(event)" id="drag3">
             </div>
-
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/warrior_princess.png" draggable="true" ondragstart="drag(event)" id="drag4">
+            </div>
         </div>
-        <!--div class="column" style="display: flex; flex-direction: column; justify-content:space-around">
-            <img src="media/protactinium.jpg" width="31" height="31" style="margin-top: 10px;">
-            <img src="media/cesium.png" width="31" height="31">
-            <img src="media/copernicium.jpeg" width="31" height="31">
-            <img src="media/hafnium.jpg" width="31" height="31">
-            <img src="media/meitnerium.jpeg" width="31" height="31">
-            <img src="media/nitrogen.jpg" width="31" height="31">
-            <img src="media/oxygen.jpg" width="31" height="31">
-            <img src="media/radon.jpg" width="31" height="31">
-            <img src="media/vanadium.png" width="50" height="31">
-            <img src="media/sodium.png" width="31" height="31">
 
-        </div--->
-        <div class="column">
-            <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="row">
+            <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             
-            <div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-            <div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-            <div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-            <div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-            <div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-            <div id="div17" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-            <div id="div18" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-            <div id="div19" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-            <div id="div20" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
         </div>
         
