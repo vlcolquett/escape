@@ -14,6 +14,53 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<script>
+			
+			function reappear(){
+				//var code = keyCode.toString()
+				var keyCode = document.getElementById("clues");
+				//console.log(keyCode.value)
+				var checker = keyCode.value.length
+				if(checker === 3){
+					var clue = keyCode.value
+					console.log("yippee")
+					switch(clue){
+						case "066":
+							console.log("executed");
+							document.getElementById("order66").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "345":
+							document.getElementById("xena").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "284": 
+							document.getElementById("thor").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "246": 
+							document.getElementById("use_the_hood_lego").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "803": 
+							document.getElementById("hideandseek").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "787": 
+							document.getElementById("banjo").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "688": 
+							document.getElementById("dogs").style.display = "inline"
+							keyCode.value = "";
+							break;
+						default:
+							keyCode.value = "";
+							break;
+					}
+				}
+			}
+		</script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -64,8 +111,12 @@
 							</p>
 							<p>You can always ask for help or clarification... doesn't mean I will give it to ya...</p>
 							<p>Have fun! I have already had lots!</p>
+							<div id="form">
+								<input type="text" id="clues" placeholder="###" maxlength="3" style="text-align:right;" onkeyup="reappear()">
+							</div>
 							<section class="tiles">
-								<article class="style1">
+								
+								<article class="style1" id="hideandseek" style='display:none;'>
 									<span class="image">
 										<img src="media/hideandseek.png" alt="" />
 									</span>
@@ -76,7 +127,8 @@
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								
+								<article class="style2" id="use_the_hood_lego" style='display:none;'>
 									<span class="image">
 										<img src="media/use_the_hood_lego.gif" alt="" />
 									</span>
@@ -87,7 +139,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="order66" style='display:none;'>
 									<span class="image">
 										<img src="media/order66.png" alt="" />
 									</span>
@@ -98,7 +150,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="dogs" style='display:none;'>
 									<span class="image">
 										<img src="media/dogsplayingpoker.png" alt="" />
 									</span>
@@ -109,7 +161,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="grove" style='display:none;'>
 									<span class="image">
 										<img src="media/grove.png" alt="" />
 									</span>
@@ -120,7 +172,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="xena" style='display:none;'>
 									<span class="image">
 										<img src="media/xena.png" alt="" />
 									</span>
@@ -131,7 +183,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="thor" style='display:none;'>
 									<span class="image">
 										<img src="media/warrior_princess_thor.png" alt="" />
 									</span>
@@ -142,7 +194,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3" id="banjo" style='display:none;'>
 									<span class="image">
 										<img src="media/banjo_wp.png" alt="" />
 									</span>
