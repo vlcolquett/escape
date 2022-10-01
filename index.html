@@ -15,7 +15,13 @@
 	</head>
 	<body class="is-preload">
 		<script>
-			
+			function banana(){
+				document.getElementById("minions").style.display = "inline"
+			}
+			function squirrel(){
+				console.log(document.getElementById("squirrel").innerHTML)
+				document.getElementById("squirrel").innerHTML = "<a href='squirrel.html'><img src='media/squirrel_suit.png' alt='' height='5%' width='5%'/></a>"
+			}
 			function reappear(){
 				//var code = keyCode.toString()
 				var keyCode = document.getElementById("clues");
@@ -54,6 +60,21 @@
 							document.getElementById("dogs").style.display = "inline"
 							keyCode.value = "";
 							break;
+						case "343":
+							document.getElementById("windows").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "662":
+							document.getElementById("grove").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "143":
+							document.getElementById("puppy").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "439":
+							document.getElementById("desk").style.display = "inline"
+							keyCode.value = "";
 						default:
 							keyCode.value = "";
 							break;
@@ -88,35 +109,34 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="https://vlcolquett.github.io/">Home</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li onclick="banana()">&#127820;</li>
+							<li><a href="dino.html"><img src="media/dino.png"></a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1><span class="symbol"><img src="media/wp_head.png" alt="" height="5%" width="5%" /></span>Escape</h1>
+							<h1><span class="symbol" id="squirrel"><img src="media/wp_head.png" alt="" height="5%" width="5%" onclick="squirrel()"/></span>Escape</h1>
 							<!--span class="image main"><img src="images/pic13.jpg" alt="" /></span-->
 							<p>
 								The warrior princess is missing and none of you seem to care... pity. 
 								Well, I retrieved her and I have broken a few rules, but I do not think you all will mind... 
-								While this page has some clues so does the living room. Don't worry, there's nothing beyond the 
+								While this page has some clues <a href="windows.html">&#129695;</a> so does the living room. Don't worry, there's nothing beyond the
 								living room. Think of this as an escape room, but you're breaking out the warrior princess.
 							</p>
-							<p>You should not have to break, tear, or damage anything to make progress...</p>
-							<p>
+							<p>You should not have to break, tear, or damage anything to make progress...<br>
 								I am sure you can brute force some of puzzles and even hack this webpage; do what you want.
 								In my opinion, one way is fun and the other is lame...
 							</p>
-							<p>You can always ask for help or clarification... doesn't mean I will give it to ya...</p>
-							<p>Have fun! I have already had lots!</p>
+							<p>You can always ask for help or clarification... doesn't mean I will give it to ya...<br>
+							Have fun! I have already had lots!</p>
 							<div id="form">
 								<input type="text" id="clues" placeholder="###" maxlength="3" style="text-align:right;" onkeyup="reappear()">
 							</div>
 							<section class="tiles">
 								
-								<article class="style1" id="hideandseek" style='display:none;'>
+								<article class="style1" id="hideandseek" ><!---->
 									<span class="image">
 										<img src="media/hideandseek.png" alt="" />
 									</span>
@@ -128,7 +148,7 @@
 									</a>
 								</article>
 								
-								<article class="style2" id="use_the_hood_lego" style='display:none;'>
+								<article class="style2" id="use_the_hood_lego" ><!---->
 									<span class="image">
 										<img src="media/use_the_hood_lego.gif" alt="" />
 									</span>
@@ -139,7 +159,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="order66" style='display:none;'>
+								<article class="style3" id="order66" ><!---->
 									<span class="image">
 										<img src="media/order66.png" alt="" />
 									</span>
@@ -150,7 +170,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="dogs" style='display:none;'>
+								<article class="style3" id="dogs" ><!---->
 									<span class="image">
 										<img src="media/dogsplayingpoker.png" alt="" />
 									</span>
@@ -161,7 +181,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="grove" style='display:none;'>
+								<article class="style3" id="grove" ><!---->
 									<span class="image">
 										<img src="media/grove.png" alt="" />
 									</span>
@@ -172,7 +192,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="xena" style='display:none;'>
+								<article class="style3" id="xena" ><!---->
 									<span class="image">
 										<img src="media/xena.png" alt="" />
 									</span>
@@ -183,7 +203,7 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="thor" style='display:none;'>
+								<article class="style3" id="thor" ><!---->
 									<span class="image">
 										<img src="media/warrior_princess_thor.png" alt="" />
 									</span>
@@ -194,11 +214,55 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="banjo" style='display:none;'>
+								<article class="style3" id="banjo" ><!---->
 									<span class="image">
 										<img src="media/banjo_wp.png" alt="" />
 									</span>
 									<a href="media/banjo_wp.png">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="windows" ><!---->
+									<span class="image">
+										<img src="media/window.png" alt="" />
+									</span>
+									<a href="media/windows.png">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="minions" ><!---->
+									<span class="image">
+										<img src="media/minions.png" alt="" />
+									</span>
+									<a href="media/minions.png">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="puppy" ><!---->
+									<span class="image">
+										<img src="media/puppy.png" alt="" />
+									</span>
+									<a href="media/puppy.png">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="desk" ><!---->
+									<span class="image">
+										<img src="media/desk.png" alt="" />
+									</span>
+									<a href="media/desk.png">
 										<h2></h2>
 										<div class="content">
 											<p></p>
@@ -212,25 +276,6 @@
 				<!-- Footer -->
 				<footer id="footer">
 					<div class="inner">
-						<!--section>
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send" class="primary" /></li>
-								</ul>
-							</form>
-						</section-->
 						<section>
 							<h2>Follow</h2>
 							<ul class="icons">
@@ -242,6 +287,7 @@
 								<!--li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li-->
 								<!--li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li-->
 								<li><a href="mailto:vlcolquett@hotmail.com.com?subject=mail from my website" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="media/bottle_cap.png"><img src="media/jar.png" alt="jar" height="30px"/></a></li>
 							</ul>
 						</section>
 						<ul class="copyright">

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+    <title>Escape</title>
+    <link rel="icon" type="image/png"  href="media/wp_head.png">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"-->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'><link rel="stylesheet" href="./assets/css/confetti.css">
+</head>
+<body class="is-preload">
+    <style>
+        #div1, #div2, #div3, #div4, #empty_div {
+          width: 60px;
+          height: 60px; 
+          margin: 10px;
+          padding: 10px;
+        }
+        
+        #div5, #div6, #div7, #div8, #div9, #div10, 
+        #div11, #div12, #div13, #div14 {
+          
+          width: 60px;
+          height: 60px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid black;
+        }
+        
+        .column {
+        /*float: left;
+        /*width: 50%;*/
+        padding: 10px;
+
+         }
+
+        .row {
+        display:flex;
+        
+        }
+        .img-squ{
+
+            height:50px;
+            width: 50px
+        }
+        .img-kiffy{
+            height: 60px;
+            width: 50px;
+        }
+        .img-brutus{
+            height: 60px;
+            width: 50px;
+        }
+    </style>
+    <script>
+        
+        function allowDrop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+          ev.dataTransfer.effectAllowed = "copyMove";
+
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          //ev.target.appendChild(document.getElementById(data));
+          var nodeCopy = document.getElementById(data).cloneNode(true);
+          nodeCopy.id = "newId";
+          ev.target.appendChild(nodeCopy);
+        }
+        function checkDrops(){
+            var drop1 = document.getElementById("div5");
+            var drop2 = document.getElementById("div6");
+            var drop3 = document.getElementById("div7");
+            var drop4 = document.getElementById("div8");
+            var drop5 = document.getElementById("div9");
+            var drop6 = document.getElementById("div10");
+            var drop7 = document.getElementById("div11");
+
+            var squirrel = document.getElementById("div1").innerHTML.toString().trim().substring(0,40);
+            var kiffy = document.getElementById("div2").innerHTML.toString().trim().substring(0,40);
+            var brutus = document.getElementById("div3").innerHTML.toString().trim().substring(0,40);
+            //console.log(drop1.innerHTML.toString())
+            //console.log(squirrel)
+            if(drop1.childNodes.length === 1 && drop2.childNodes.length === 1 && drop3.childNodes.length === 1 && drop4.childNodes.length === 1
+            && drop5.childNodes.length === 1 && drop6.childNodes.length === 1 && drop7.childNodes.length === 1){
+                console.log("still works")
+                console.log(drop1.innerHTML.toString())
+                console.log(drop2.innerHTML.toString())
+                console.log(drop6.innerHTML.toString())
+                console.log(squirrel)
+                console.log(kiffy)
+                console.log(brutus)
+                if(drop1.innerHTML.toString().substring(0,40) == squirrel && drop2.innerHTML.toString().substring(0,40) == kiffy && drop3.innerHTML.toString().substring(0,40) == squirrel
+                && drop4.innerHTML.toString().substring(0,40) == kiffy && drop5.innerHTML.toString().substring(0,40) == squirrel && drop6.innerHTML.toString().substring(0,40) == brutus &&
+                drop7.innerHTML.toString().substring(0,40) == kiffy){
+                    console.log("yippee");
+                    document.getElementById("confetti").style.display = "inline"
+                    document.getElementById("ans").style.display = "inline"
+                }
+                else{
+                    location.reload()
+                }
+            }
+        }
+   
+    </script>
+</head>
+<body>
+    <div id="ans" style= " position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); display: none;"><font size="36">662</font></div>
+    <canvas height='1' id='confetti' width='1' style="display:none"></canvas>
+    <header id="header">
+        <div class="inner">
+            <!-- Nav -->
+                <nav style="position:absolute; right: 10px;">
+                    <a href="index.html">Return</a>
+                </nav>
+
+        </div>
+    </header>
+
+    <div class="column" >
+        <div></div>
+        <div class="row">
+            <div id="empty_div"></div>
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/warrior_princess.png" draggable="true" ondragstart="drag(event)" id="drag4" ondragend="checkDrops()">
+            </div>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-squ" src="media/squirrel.png" draggable="true" ondragstart="drag(event)" id="drag1" ondragend="checkDrops()">
+            </div>
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-kiffy" src="media/kiffy.png" draggable="true" ondragstart="drag(event)" id="drag2" ondragend="checkDrops()">
+            </div>
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/brutus.png" draggable="true" ondragstart="drag(event)" id="drag3" ondragend="checkDrops()">
+            </div>
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img class="img-brutus" src="media/warrior_princess.png" draggable="true" ondragstart="drag(event)" id="drag4" ondragend="checkDrops()">
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            
+            <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        </div>
+        
+    </div>
+    <script  src="./assets/js/confetti.js"></script>
+</body>
+</html>
