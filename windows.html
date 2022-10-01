@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<title>Escape</title>
+    	<link rel="icon" type="image/png"  href="media/wp_head.png">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'><link rel="stylesheet" href="./assets/css/confetti.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .grid-container {
+                display: grid;
+                gap: 10px 10px;
+                grid-template-columns: auto auto auto;
+                background-color: #2196F3;
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+            .grid-item {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 50px;
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            //document.body.style.backgroundColor = "red";
+            var count = 0;
+            var citem1 = 0;
+            var citem2= 0; citem3= 0; citem4= 0; citem5= 0; citem6= 0; citem7= 0; citem8= 0; citem9= 0; citem10= 0; citem11= 0; citem12 = 0;
+            var changes = "";
+            item1_check=""; item2_check=""; item3_check=""; item4_check=""; item5_check=""; item6_check=""; item7_check=""; item8_check="";
+            item9_check=""; item10_check=""; item11_check=""; item12_check="";
+            const color = ["blue","red","orange","yellow","green","brown","purple"]
+            function colors(){
+                console.log(arguments[0]);
+                switch(arguments[0]){
+                    case "item1":
+                        citem1+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem1 % 7];
+                        item1_check = color[citem1 % 7];
+                        break;
+                    case "item2":
+                        citem2+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem2 % 7];
+                        item2_check = color[citem2 % 7];
+                        console.log("two");
+                        break;
+                    case "item3":
+                        citem3+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem3 % 7];
+                        item3_check = color[citem3 % 7];
+                        break;
+                    case "item4":
+                        citem4+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem4 % 7];
+                        item4_check = color[citem4 % 7];
+                        break;
+                    case "item5":
+                        citem5+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem5 % 7];
+                        item5_check = color[citem5 % 7];
+                        break;
+                    case "item6":
+                        citem6+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem6 % 7];
+                        item6_check = color[citem6 % 7];
+                        break;
+                    case "item7":
+                        citem7+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem7 % 7];
+                        item7_check = color[citem7 % 7];
+                        break;
+                    case "item8":
+                        citem8+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem8 % 7];
+                        item8_check = color[citem8 % 7];
+                        break;
+                    case "item9":
+                        citem9+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem9 % 7];
+                        item9_check = color[citem9 % 7];
+                        break;
+                    case "item10":
+                        citem10+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem10 % 7];
+                        item10_check = color[citem10 % 7];
+                        break;
+                    case "item11":
+                        citem11+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem11 % 7];
+                        item11_check = color[citem11 % 7];
+                        break;
+                    case "item12":
+                        citem12+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem12 % 7];
+                        item12_check = color[citem12 % 7];
+                        break;
+                }
+                count+=1;
+                console.log(count);
+                if(item1_check=="red"&&item2_check=="brown"&&item3_check=="purple"&&item4_check=="purple"&&item5_check=="yellow"&&item6_check=="blue"
+                &&item7_check=="orange"&&item8_check=="yellow"&&item9_check=="purple"&&item10_check=="green"&&item11_check=="red"&&item12_check=="green"){
+                    console.log("confetti");
+                    document.getElementById("confetti").style.display = "inline"
+                    document.getElementById("ans").style.display = "inline"
+                }
+            }
+
+        </script>
+	</head>
+	<body class="is-preload">
+        <div id="ans" style= " position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); display: none;"><font size="36">343</font></div>
+        <canvas height='1' id='confetti' width='1' style="display:none"></canvas>
+        <div id="wrapper">
+            <!-- Nav -->
+            <nav style="position:absolute; right: 10px;">
+                <a href="index.html">Return</a>
+            </nav>
+            <div class="grid-container">
+                <div class="grid-item" id="item1" onclick="colors('item1')"></div>
+                <div class="grid-item" id="item2" onclick="colors('item2')"></div>
+                <div class="grid-item" id="item3" onclick="colors('item3')"></div>  
+                <div class="grid-item" id="item4" onclick="colors('item4')"></div>
+                <div class="grid-item" id="item5" onclick="colors('item5')"></div>
+                <div class="grid-item" id="item6" onclick="colors('item6')"></div>  
+                <div class="grid-item" id="item7" onclick="colors('item7')"></div>
+                <div class="grid-item" id="item8" onclick="colors('item8')"></div>
+                <div class="grid-item" id="item9" onclick="colors('item9')"></div>
+                <div class="grid-item" id="item10" onclick="colors('item10')"></div>  
+                <div class="grid-item" id="item11" onclick="colors('item11')"></div>    
+                <div class="grid-item" id="item12" onclick="colors('item12')"></div>  
+              </div>
+        </div>
+		<!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script  src="./assets/js/confetti.js"></script>
+
+    </body>
+</html>
