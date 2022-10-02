@@ -15,13 +15,22 @@
 	</head>
 	<body class="is-preload">
 		<script>
+			bn=""
+			a066="", a345="", a284="", a246="", a803="", a787="", a688="", a662="", a143="", a343="", a800="", a439="", a425="";
 			function banana(){
-				document.getElementById("minions").style.display = "inline"
+				bn = document.getElementById("minions").style.display = "inline"
+				if(a066 == "inline" && a345 == "inline" && a284 == "inline" && a246 == "inline" && a803 == "inline" && a787 == "inline" && a688 == "inline" &&
+				a662 == "inline" && a143 == "inline" && a343 == "inline" && a800 == "inline" && a439 == "inline" && a425 == "inline" && bn == "inline"){
+					document.getElementById("earth").style.display = "inline"
+					console.log("hello earth")
+				}
 			}
 			function squirrel(){
 				console.log(document.getElementById("squirrel").innerHTML)
 				document.getElementById("squirrel").innerHTML = "<a href='squirrel.html'><img src='media/squirrel_suit.png' alt='' height='5%' width='5%'/></a>"
 			}
+			
+			
 			function reappear(){
 				//var code = keyCode.toString()
 				var keyCode = document.getElementById("clues");
@@ -31,54 +40,69 @@
 					var clue = keyCode.value
 					console.log("yippee")
 					switch(clue){
-						case "066":
+						case "066"://1
 							console.log("executed");
-							document.getElementById("order66").style.display = "inline"
+							a066 = document.getElementById("order66").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "345":
-							document.getElementById("xena").style.display = "inline"
+						case "345"://2
+							 a345 = document.getElementById("xena").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "284": 
-							document.getElementById("thor").style.display = "inline"
+						case "284": //3
+							 a284 = document.getElementById("thor").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "246": 
-							document.getElementById("use_the_hood_lego").style.display = "inline"
+						case "911": //4
+							 a246 = document.getElementById("use_the_hood_lego").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "803": 
-							document.getElementById("hideandseek").style.display = "inline"
+						case "803": //5
+							 a803 = document.getElementById("hideandseek").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "787": 
-							document.getElementById("banjo").style.display = "inline"
+						case "787": //6
+							 a787 = document.getElementById("banjo").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "688": 
-							document.getElementById("dogs").style.display = "inline"
+						case "688": //7
+							 a688 = document.getElementById("dogs").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "343":
-							document.getElementById("windows").style.display = "inline"
+						case "343"://8
+							 a343 = document.getElementById("windows").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "662":
-							document.getElementById("grove").style.display = "inline"
+						case "662"://9
+							 a662 = document.getElementById("grove").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "143":
-							document.getElementById("puppy").style.display = "inline"
+						case "143"://10
+							 a143 = document.getElementById("puppy").style.display = "inline"
 							keyCode.value = "";
 							break;
-						case "439":
-							document.getElementById("desk").style.display = "inline"
+						case "439"://11
+							 a439 = document.getElementById("desk").style.display = "inline"
 							keyCode.value = "";
+							break;
+						case "425"://12
+							 a425 = document.getElementById("cactus").style.display = "inline"
+							keyCode.value = "";
+							break;
+						case "800": //13
+							 a800 = document.getElementById("math_cats").style.display = "inline"
+							keyCode.value = "";
+							break;
 						default:
 							keyCode.value = "";
 							break;
 					}
+				}
+				console.log(a066, a345, a284, a246, a803, a787, a688, a662, a143, a343, a800, a439, a425);
+				if(a066 == "inline" && a345 == "inline" && a284 == "inline" && a246 == "inline" && a803 == "inline" && a787 == "inline" && a688 == "inline" &&
+				a662 == "inline" && a143 == "inline" && a343 == "inline" && a800 == "inline" && a439 == "inline" && a425 == "inline" && bn == "inline"){
+					document.getElementById("earth").style.display = "inline"
+					console.log("hello earth")
 				}
 			}
 		</script>
@@ -90,9 +114,9 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="https://vlcolquett.github.io/" class="logo">
+								<!--a href="https://vlcolquett.github.io/" class="logo">
 									<span class="symbol"><img src="images/duck.png" alt="" /></span><span class="title">Virginia Lane Colquett</span>
-								</a>
+								</a-->
 
 							<!-- Nav -->
 								<nav>
@@ -108,7 +132,7 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="https://vlcolquett.github.io/">Home</a></li>
+							<!--li><a href="https://vlcolquett.github.io/">Home</a></li-->
 							<li onclick="banana()">&#127820;</li>
 							<li><a href="dino.html"><img src="media/dino.png"></a></li>
 						</ul>
@@ -126,7 +150,7 @@
 								living room. Think of this as an escape room, but you're breaking out the warrior princess.
 							</p>
 							<p>You should not have to break, tear, or damage anything to make progress...<br>
-								I am sure you can brute force some of puzzles and even hack this webpage; do what you want.
+								I am sure you can brute force some of the puzzles and even hack this webpage; do what you want.
 								In my opinion, one way is fun and the other is lame...
 							</p>
 							<p>You can always ask for help or clarification... doesn't mean I will give it to ya...<br>
@@ -135,140 +159,171 @@
 								<input type="text" id="clues" placeholder="###" maxlength="3" style="text-align:right;" onkeyup="reappear()">
 							</div>
 							<section class="tiles">
-								
-								<article class="style1" id="hideandseek" ><!---->
+								<article class="style3" id="math_cats" style="display:none;">
 									<span class="image">
-										<img src="media/hideandseek.png" alt="" />
+										<img src="media/math_cats.png" alt="" />
 									</span>
-									<a href="media/hideandseek.png">
+									<a href="media/grid/1.png" target="_blank">
 										<h2></h2>
 										<div class="content">
 											<p></p>
 										</div>
 									</a>
 								</article>
-								
-								<article class="style2" id="use_the_hood_lego" ><!---->
-									<span class="image">
-										<img src="media/use_the_hood_lego.gif" alt="" />
-									</span>
-									<a href="media/use_the_hood_lego.gif">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="order66" ><!---->
-									<span class="image">
-										<img src="media/order66.png" alt="" />
-									</span>
-									<a href="media/order66.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="dogs" ><!---->
-									<span class="image">
-										<img src="media/dogsplayingpoker.png" alt="" />
-									</span>
-									<a href="media/dogsplayingpoker.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="grove" ><!---->
-									<span class="image">
-										<img src="media/grove.png" alt="" />
-									</span>
-									<a href="media/grove.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="xena" ><!---->
-									<span class="image">
-										<img src="media/xena.png" alt="" />
-									</span>
-									<a href="media/xena.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="thor" ><!---->
-									<span class="image">
-										<img src="media/warrior_princess_thor.png" alt="" />
-									</span>
-									<a href="media/warrior_princess_thor.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="banjo" ><!---->
-									<span class="image">
-										<img src="media/banjo_wp.png" alt="" />
-									</span>
-									<a href="media/banjo_wp.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="windows" ><!---->
-									<span class="image">
-										<img src="media/window.png" alt="" />
-									</span>
-									<a href="media/windows.png">
-										<h2></h2>
-										<div class="content">
-											<p></p>
-										</div>
-									</a>
-								</article>
-								<article class="style3" id="minions" ><!---->
+								<article class="style3" id="minions" style="display:none;">
 									<span class="image">
 										<img src="media/minions.png" alt="" />
 									</span>
-									<a href="media/minions.png">
+									<a href="media/grid/2.png" target="_blank">
 										<h2></h2>
 										<div class="content">
 											<p></p>
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="puppy" ><!---->
+								<article class="style3" id="cactus" style="display:none;">
 									<span class="image">
-										<img src="media/puppy.png" alt="" />
+										<img src="media/cactus.png" alt="" />
 									</span>
-									<a href="media/puppy.png">
+									<a href="media/grid/3.png" target="_blank">
 										<h2></h2>
 										<div class="content">
 											<p></p>
 										</div>
 									</a>
 								</article>
-								<article class="style3" id="desk" ><!---->
+								<article class="style1" id="hideandseek" style="display:none;">
+									<span class="image">
+										<img src="media/hideandseek.png" alt="" />
+									</span>
+									<a href="media/grid/4.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="dogs" style="display:none;">
+									<span class="image">
+										<img src="media/dogsplayingpoker.png" alt="" />
+									</span>
+									<a href="media/grid/5.png"target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="order66" style="display:none;"style="display:none;">
+									<span class="image">
+										<img src="media/order66.png" alt="" />
+									</span>
+									<a href="media/grid/6.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="grove" style="display:none;">
+									<span class="image">
+										<img src="media/grove.png" alt="" />
+									</span>
+									<a href="media/grid/7.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="earth" style="display:none;">
+									<span class="image">
+										<img src="media/earth.gif" alt="" />
+									</span>
+									<a href="astronaut.html">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>	
+								<article class="style3" id="desk" style="display:none;">
 									<span class="image">
 										<img src="media/desk.png" alt="" />
 									</span>
-									<a href="media/desk.png">
+									<a href="media/grid/9.png" target="_blank">
 										<h2></h2>
 										<div class="content">
 											<p></p>
 										</div>
 									</a>
 								</article>
+								<article class="style3" id="windows" style="display:none;">
+									<span class="image">
+										<img src="media/window.png" alt="" />
+									</span>
+									<a href="media/grid/10.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style2" id="use_the_hood_lego" style="display:none;">
+									<span class="image">
+										<img src="media/use_the_hood_lego.gif" alt="" />
+									</span>
+									<a href="media/grid/11.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="xena" style="display:none;">
+									<span class="image">
+										<img src="media/xena.png" alt="" />
+									</span>
+									<a href="media/grid/12.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="banjo" style="display:none;">
+									<span class="image">
+										<img src="media/banjo_wp.png" alt="" />
+									</span>
+									<a href="media/grid/13.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="puppy" style="display:none;">
+									<span class="image">
+										<img src="media/puppy.png" alt="" />
+									</span>
+									<a href="media/grid/14.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>
+								<article class="style3" id="thor" style="display:none;">
+									<span class="image">
+										<img src="media/warrior_princess_thor.png" alt="" />
+									</span>
+									<a href="media/grid/15.png" target="_blank">
+										<h2></h2>
+										<div class="content">
+											<p></p>
+										</div>
+									</a>
+								</article>	
 							</section>
 						</div>
 					</div>
@@ -283,11 +338,11 @@
 								<!--li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li-->
 								<!--li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li-->
 								<!--li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li-->
-								<li><a href="https://github.com/vlcolquett" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<!--li><a href="https://github.com/vlcolquett" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li-->
 								<!--li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li-->
 								<!--li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li-->
 								<li><a href="mailto:vlcolquett@hotmail.com.com?subject=mail from my website" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								<li><a href="media/bottle_cap.png"><img src="media/jar.png" alt="jar" height="30px"/></a></li>
+								<li><a href="media/bottle_cap.png" target="_blank"><img src="media/jar.png" alt="jar" height="30px"/></a></li>
 							</ul>
 						</section>
 						<ul class="copyright">
