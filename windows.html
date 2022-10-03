@@ -35,9 +35,10 @@
             var count = 0;
             var citem1 = 0;
             var citem2= 0; citem3= 0; citem4= 0; citem5= 0; citem6= 0; citem7= 0; citem8= 0; citem9= 0; citem10= 0; citem11= 0; citem12 = 0;
+            citem13 = 0; citem14 = 0; citem15 = 0;
             var changes = "";
             item1_check=""; item2_check=""; item3_check=""; item4_check=""; item5_check=""; item6_check=""; item7_check=""; item8_check="";
-            item9_check=""; item10_check=""; item11_check=""; item12_check="";
+            item9_check=""; item10_check=""; item11_check=""; item12_check=""; item13_check=""; item14_check=""; item15_check="";
             const color = ["blue","red","orange","yellow","green","brown","purple"]
             function colors(){
                 console.log(arguments[0]);
@@ -103,11 +104,27 @@
                         document.getElementById(arguments[0]).style.backgroundColor = color[citem12 % 7];
                         item12_check = color[citem12 % 7];
                         break;
+                    case "item13":
+                        citem13+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem13 % 7];
+                        item13_check = color[citem13 % 7];
+                        break;
+                    case "item14":
+                    citem14+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem14 % 7];
+                        item14_check = color[citem14 % 7];
+                        break;
+                    case "item15":
+                        citem15+=1;
+                        document.getElementById(arguments[0]).style.backgroundColor = color[citem15 % 7];
+                        item15_check = color[citem15 % 7];
+                        break;
                 }
                 count+=1;
                 console.log(count);
                 if(item1_check=="red"&&item2_check=="brown"&&item3_check=="purple"&&item4_check=="purple"&&item5_check=="yellow"&&item6_check=="blue"
-                &&item7_check=="orange"&&item8_check=="yellow"&&item9_check=="purple"&&item10_check=="green"&&item11_check=="red"&&item12_check=="green"){
+                &&item7_check=="orange"&&item8_check=="yellow"&&item9_check=="purple"&&item10_check=="green"&&item11_check=="red"&&item12_check=="green"
+                &&item13_check=="orange"&&item14_check=="blue"&&item15_check=="red"){
                     console.log("confetti");
                     document.getElementById("confetti").style.display = "inline"
                     document.getElementById("ans").style.display = "inline"
@@ -137,6 +154,9 @@
                 <div class="grid-item" id="item10" onclick="colors('item10')"></div>  
                 <div class="grid-item" id="item11" onclick="colors('item11')"></div>    
                 <div class="grid-item" id="item12" onclick="colors('item12')"></div>  
+                <div class="grid-item" id="item13" onclick="colors('item13')"></div> 
+                <div class="grid-item" id="item14" onclick="colors('item14')"></div> 
+                <div class="grid-item" id="item15" onclick="colors('item15')"></div> 
               </div>
         </div>
 		<!-- Scripts -->
