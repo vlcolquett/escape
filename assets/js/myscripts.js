@@ -25,7 +25,7 @@ var s4 = document.getElementById("s4")
 var s5 = document.getElementById("s5")
 console.log(s1.value)
 function showStarter(){
-    if(s1.value==1 && s2.value==1 && s3.value==1 && s4.value==1 && s5.value==1){
+    if(s1.value=="*" && s2.value=="G" && s3.value=="@" && s4.value=="?" && s5.value==2){
         location.replace("https://vlcolquett.github.io/escape/index");
         
     }
