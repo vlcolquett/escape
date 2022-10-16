@@ -23,9 +23,14 @@ var s2 = document.getElementById("s2")
 var s3 = document.getElementById("s3")
 var s4 = document.getElementById("s4")
 var s5 = document.getElementById("s5")
+var s6 = document.getElementById("s6")
+var s7 = document.getElementById("s7")
+var s8 = document.getElementById("s8")
+var s9 = document.getElementById("s9")
 console.log(s1.value)
 function showStarter(){
-    if(s1.value=="*" && s2.value=="G" && s3.value=="@" && s4.value=="?" && s5.value==2){
+    if(s1.value=="*" && s2.value=="G" && s3.value=="@" && s4.value=="?" && s5.value==2 && s6.value=="&"&&
+    s7.value=="#"&&s8.value=="K"&&s9.value==9){
         location.replace("https://vlcolquett.github.io/escape/index");
         
     }
