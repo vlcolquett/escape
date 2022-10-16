@@ -30,7 +30,7 @@ var s9 = document.getElementById("s9")
 console.log(s1.value)
 function showStarter(){
     if(s1.value=="*" && s2.value=="G" && s3.value=="@" && s4.value=="?" && s5.value==2 && s6.value=="&"&&
-    s7.value=="#"&&s8.value=="K"&&s9.value==9){
+    s7.value=="#"&&s8.value=="9"&&s9.value=="K"){
         location.replace("https://vlcolquett.github.io/escape/index");
         
     }
